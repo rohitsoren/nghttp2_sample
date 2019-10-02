@@ -1,0 +1,12 @@
+#!/bin/sh -e
+
+libdir="/home/rohit/Downloads/nghttp2-1.39.2/lib"
+if [ -d "$libdir/.libs" ]; then
+    libdir="$libdir/.libs"
+fi
+
+export CGO_CFLAGS="-I/home/rohit/Downloads/nghttp2-1.39.2/lib/includes -I/home/rohit/Downloads/nghttp2-1.39.2/lib/includes"
+export CGO_LDFLAGS="-L$libdir"
+export LD_LIBRARY_PATH="$libdir"
+export GODEBUG=cgocheck=0
+"$@"

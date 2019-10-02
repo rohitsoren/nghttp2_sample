@@ -1,0 +1,6 @@
+In file included from server.cpp:11:0:
+../nghttp2-1.39.2/lib/includes/nghttp2/nghttp2.h:55:10: fatal error: nghttp2/nghttp2ver.h: No such file or directory
+ #include <nghttp2/nghttp2ver.h>
+          ^~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [server.o] Error 1
